@@ -1,11 +1,11 @@
 import React from 'react'
 import Auxs from '../Auxs/Auxs'
 
-function Layout() {
+function Layout(props) {
     return (
         <Auxs>
             <main>
-                {this.props.children}
+                {props.children}
             </main>
         </Auxs>
     )
