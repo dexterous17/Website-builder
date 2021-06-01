@@ -2,9 +2,9 @@ import React from 'react'
 
 function Content(props) {
     return (
-        <div className={props.className}>
-            
-        </div>
+        <main className={props.className}>
+            {props.children}
+        </main>
     )
 }
 

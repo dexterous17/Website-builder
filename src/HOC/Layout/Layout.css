@@ -1,5 +1,27 @@
 .Layout{
+    position: relative;
     display:flex;
+    flex-flow: row;
     justify-content:flex-start;
-    background:red;
+}
+
+.Layout > .Content{
+    flex: 1;
+}
+
+.Layout > .SideSliders{
+    
+    position: absolute;
+    right: 0px;
+    width: 10%;
+
+    border: 1px solid black;
+    border-top: none;
+    border-right: none;
+    display: flex;
+    flex-flow: column;
+    flex: 2;
+   
+    background-color: lightgrey;
+    height:100vh;
 }

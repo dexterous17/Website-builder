@@ -7,11 +7,11 @@ import './Layout.css'
 function Layout(props) {
     return (
         <Auxs className="Layout">
-            <Content/>
-            <SideSliders/>
-            <main>
+            <Content className="Content"/>
+            <SideSliders className="SideSliders"/>
+            <Auxs>
                 {props.children}
-            </main>
+            </Auxs>
         </Auxs>
     )
 }
