@@ -6,12 +6,12 @@ import ControlsToAddHTMLPage from '../../Controls To Add HTML Page/ControlsToAdd
 import './SideSliders.css'
 
 
-function SideSliders() {
+function SideSliders(props) {
     return (
       <SideAuxs className="SideSliders">
-          <Button backgroundColor="blue" right="0px" position="absolute"/>
+          <Button backgroundColor="blue" right="0px" position="absolute">+</Button>
           <Hr/>
-          <ControlsToAddHTMLPage/>
+          <ControlsToAddHTMLPage />
       </SideAuxs>
     )
 }

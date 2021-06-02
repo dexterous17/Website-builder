@@ -1,7 +1,7 @@
 import React from 'react'
-import Auxs from '../../../HOC/Auxs/Auxs'
-function Button(props) {
-    
+
+function Label(props) {
+
     function nothing(){
 
     }
@@ -20,14 +20,12 @@ function Button(props) {
         right:right,
         top:top
   }
-    
+
     return (
-    
-    <Auxs>
-        <button style={myStyle} onClick={onClick}>{props.children}</button>
-    </Auxs>
-    
+        <label for={props.label} style={myStyle} onClick={onClick}>
+            {props.children}
+        </label>
     )
 }
 
-export default Button
+export default Label
