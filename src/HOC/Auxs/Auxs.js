@@ -19,7 +19,7 @@ function Auxs(props){
   }
     
     return(
-        <aside className={ClassName} style={myStyle}>{props.children}</aside>
+        <div className={ClassName} style={myStyle}>{props.children}</div>
     )
 };
 export default Auxs

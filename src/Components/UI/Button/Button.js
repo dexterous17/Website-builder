@@ -1,5 +1,4 @@
 import React from 'react'
-import Auxs from '../../../HOC/Auxs/Auxs'
 function Button(props) {
     
     function nothing(){
@@ -22,11 +21,7 @@ function Button(props) {
   }
     
     return (
-    
-    <Auxs>
         <button style={myStyle} onClick={onClick}>{props.children}</button>
-    </Auxs>
-    
     )
 }
 
