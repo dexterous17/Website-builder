@@ -7,7 +7,10 @@ function ControlsToAddHTMLPage(props) {
     const controls = [
         { label: 'Button', position: 'absolute',left:'10%' },
         { label: 'Image', position: 'absolute' ,left:'10%' },
-        { label: 'Meter', position: 'absolute' ,left:'10%' },
+        { label: 'Label', position: 'absolute' ,left:'10%' },
+        {label:'Empty box',position:'absolute',left:'10%'},
+        {label:'Link',position:'absolute',left:'10%'},
+        {label:'Bold',position:'absolute',left:'10%',padding:'10px'}
     ];
    
     function addHTMLTags(e,params) {
@@ -20,7 +23,7 @@ function ControlsToAddHTMLPage(props) {
            <Label for="-/ List of Available tag"> -/ List of Available tag</Label>            
            <ol>
                 {controls.map(ctrl => (
-                        <li><Button value={ctrl.value} position={ctrl.position} left={ctrl.left} onClick={(e) => addHTMLTags(e,ctrl.label)}>{ctrl.label}</Button></li>
+                        <li><Button value={ctrl.value} position={ctrl.position} left={ctrl.left} padding={ctrl.padding?ctrl.padding:"none"}onClick={(e) => addHTMLTags(e,ctrl.label)}>{ctrl.label}</Button></li>
                 ))}
            </ol>
        </Auxs>

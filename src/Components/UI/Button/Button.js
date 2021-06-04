@@ -11,13 +11,16 @@ function Button(props) {
     const left= props.left?props.left:"none";
     const top = props.top?props.top:"none";
     const onClick = props.onClick?props.onClick:nothing;
+    const padding = props.padding?props.padding:"none";
+
 
     const myStyle = {
         position:position,
         backgroundColor:backgroundColor,
         left:left,
         right:right,
-        top:top
+        top:top,
+        padding:padding
   }
     
     return (
