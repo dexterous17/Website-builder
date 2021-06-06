@@ -4,6 +4,7 @@ import Button from '../../Components/UI/Button/Button'
 import Auxs from '../../HOC/Auxs/Auxs'
 function ControlsToAddHTMLPage(props) {
 
+
     const controls = [
         { label: 'Button', position: 'absolute',left:'10%' },
         { label: 'Image', position: 'absolute' ,left:'10%' },
