@@ -1,13 +1,17 @@
+let actionpayload = null;
+let key = null;
 const initialState = {
-    Tags:[]
+    Tag:[{}]
 }
 
 const counterReducer = (state = initialState,action) => {
     switch(action.type){
         case 'ADDTAG':
+            actionpayload = action.payload;
+            key = Math.random()
             return{
                 ...state,
-                Tags: state.Tags.concat(action.payload)
+                Tag: state.Tag.concat({key,actionpayload})
             }
         case 'DECREMENT':
             return state -1;

@@ -6,12 +6,14 @@
 }
 
 .Layout > .Content{
+    position: absolute;
     flex: 1;
 }
 
 .Layout > .SideSliders{
     /* Position Property*/
     position: absolute;
+    top: 0px;
     right: 0px;
     width: 10%;
 

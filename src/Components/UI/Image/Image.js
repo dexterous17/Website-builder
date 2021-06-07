@@ -1,15 +1,21 @@
-import React from 'react';
+import React from 'react'
 
-function Auxs(props){
+function Image(props) {
 
-    let ClassName = props.className?props.className:null
+        
+    function nothing(){
+
+    }
 
     const backgroundColor = props.backgroundColor?props.backgroundColor:"none"
     const position = props.position?props.position:"none"
     const right= props.right?props.right:"none";
     const left= props.left?props.left:"none";
     const top = props.top?props.top:"none";
-    const bottom = props.bottom?props.bottom:"none";
+    const onClick = props.onClick?props.onClick:nothing;
+    const padding = props.padding?props.padding:"none";
+    const src = props.src?props.src:"none";
+    const alt = props.alt?props.alt:"none";
 
     const myStyle = {
         position:position,
@@ -17,11 +23,12 @@ function Auxs(props){
         left:left,
         right:right,
         top:top,
-        bottom:bottom
+        padding:padding
   }
-    
-    return(
-        <div className={ClassName} style={myStyle}>{props.children}</div>
+
+    return (
+        <image src={src} alt={alt} style={myStyle} onClick={onClick} />
     )
-};
-export default Auxs
+}
+
+export default Image

@@ -4,17 +4,18 @@ import SideSliders from '../../Containers/Sliders/SideSliders/SideSliders'
 import Auxs from '../Auxs/Auxs'
 import {useSelector} from 'react-redux'
 import './Layout.css'
+import Tags from '../../Components/Tags/Tags'
 
 
 function Layout(props) {
-
-    const data = useSelector(state => state.Tags);
+    const data = useSelector(state => state.Tag);
+    const HTMLTags= data.map((tags)=><Tags key={tags.key} Type={tags.actionpayload}/>);             
     
 
     return (
         <Auxs className="Layout">
             <Content className="Content">
-                {data}
+                {HTMLTags}
             </Content>
             <SideSliders className="SideSliders"/>
             <Auxs>
