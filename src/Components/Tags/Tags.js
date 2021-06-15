@@ -1,23 +1,29 @@
 import React from 'react'
 import Button from '../UI/Button/Button';
+import Hr from '../UI/HR/Hr';
 import Image from '../UI/Image/Image';
+
 function Tags(props) {
-    let Tags = null;
-    
+        
     switch (props.Type) {
+        
         case('Button'):
-        Tags = <Button>Button</Button>  
-        break;
+            return (<Button>Button</Button>);  
+        
+        
         case('Image'):
-        Tags = <Image/>
-        break;
+            return (<Image/>);
+        
+
+        case('HR'):
+            return (<Hr/>);
+
+
         default:
-            Tags=null;
-        break;
-        }
+            return (null);
+        
+    }
     
-    
-    return Tags;
 }
 
 export default Tags

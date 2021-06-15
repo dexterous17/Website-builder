@@ -1,10 +1,12 @@
 import React from 'react'
+import Main from '../../Components/UI/Main/Main'
 
 function Content(props) {
+    
     return (
-        <main className={props.className}>
+        <Main {...props}>
             {props.children}
-        </main>
+        </Main>
     )
 }
 

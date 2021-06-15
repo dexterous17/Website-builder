@@ -13,17 +13,16 @@ function ControlsToAddHTMLPage(props) {
         { label: 'Button', position: 'absolute',left:'10%' },
         { label: 'Image', position: 'absolute' ,left:'10%' },
         { label: 'Label', position: 'absolute' ,left:'10%' },
-        {label:'Empty box',position:'absolute',left:'10%'},
         {label:'Link',position:'absolute',left:'10%'},
         {label:'Bold',position:'absolute',left:'10%'}
     ];
 
     return (
-       <Auxs position="absolute" top="3%" left="1%">
-           <Label for="-/ List of Available tag"> -/ List of Available tag</Label>            
+       <Auxs>
+           <Label for="Standard">Standard</Label>            
            <ol>
                 {controls.map(ctrl => (
-                        <li key={ctrl.label}><Button value={ctrl.value} position={ctrl.position} left={ctrl.left} padding={ctrl.padding?ctrl.padding:"none"}onClick={() => dispatch(INCREMENT(ctrl.label))}>{ctrl.label}</Button></li>
+                        <li key={ctrl.label}><Button value={ctrl.value} position={ctrl.position} left={ctrl.left}  onClick={() => dispatch(INCREMENT(ctrl.label))}>{ctrl.label}</Button></li>
                 ))}
            </ol>
        </Auxs>
