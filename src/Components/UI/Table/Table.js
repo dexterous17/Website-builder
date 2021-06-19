@@ -16,7 +16,8 @@ function Table(props) {
     const alignItems = props.alignItems?props.alignItems:"false";
     const flex= props.flex?props.flex:"false";
     const flexGrow= props.flexGrow?props.flexGrow:"false";
-
+    const cellSpacing = props.cellSpacing?props.cellSpacing:"0";
+    const cellPadding = props.cellPadding?props.cellPadding:"0";
     const myStyle = {
         position:position,
         backgroundColor:backgroundColor,
@@ -35,7 +36,7 @@ function Table(props) {
   }
 
     return (
-        <table style={myStyle}>{props.children}</table>
+        <table cellPadding={cellPadding} cellSpacing={cellSpacing} style={myStyle}>{props.children}</table>
     )
 
 }

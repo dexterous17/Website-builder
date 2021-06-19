@@ -20,7 +20,7 @@ function Layout(props) {
 
     const body =  (
     <Tags Type="Table" position="absolute" width="100%" height="auto">  
-        <Tags Type="Tbody" position="relative" width="100%" height="auto" display="flex" flexDirection="column">  
+        <Tags Type="Tbody" position="relative" width="100%" height="auto" display="flex" flexDirection="column" >  
             {HTMLTags} 
         </Tags> 
     </Tags>) ;
