@@ -1,7 +1,6 @@
 import React from 'react'
 
-function Main(props) {
-
+function Trtdwithfunction(props) {
     const backgroundColor = props.backgroundColor?props.backgroundColor:"none"
     const position = props.position?props.position:"none"
     const right= props.right?props.right:"none";
@@ -16,7 +15,9 @@ function Main(props) {
     const alignItems = props.alignItems?props.alignItems:"false";
     const flex= props.flex?props.flex:"false";
     const flexGrow= props.flexGrow?props.flexGrow:"false";
-
+    const border= props.border?props.border:"false";
+    const minHeight=props.minHeight?props.minHeight:"false";
+    const flexDirection = props.flexDirection?props.flexDirection:"false";
 
     const myStyle = {
         position:position,
@@ -28,18 +29,19 @@ function Main(props) {
         padding:padding,
         width:width,
         height:height,
+        minHeight:minHeight,
         display:display,
         justifyContent:justifyContent,
         alignItems:alignItems,
         flex:flex,
-        flexGrow:flexGrow
+        flexGrow:flexGrow,
+        border:border,
+        flexDirection:flexDirection
   }
 
     return (
-        <main style={myStyle}>
-            {props.children}
-        </main>
+        <tr style={myStyle}>{props.children}</tr>
     )
 }
 
-export default Main
+export default Trtdwithfunction

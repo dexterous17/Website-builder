@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Main(props) {
+function Table(props) {
 
     const backgroundColor = props.backgroundColor?props.backgroundColor:"none"
     const position = props.position?props.position:"none"
@@ -16,7 +16,6 @@ function Main(props) {
     const alignItems = props.alignItems?props.alignItems:"false";
     const flex= props.flex?props.flex:"false";
     const flexGrow= props.flexGrow?props.flexGrow:"false";
-
 
     const myStyle = {
         position:position,
@@ -36,10 +35,9 @@ function Main(props) {
   }
 
     return (
-        <main style={myStyle}>
-            {props.children}
-        </main>
+        <table style={myStyle}>{props.children}</table>
     )
+
 }
 
-export default Main
+export default Table

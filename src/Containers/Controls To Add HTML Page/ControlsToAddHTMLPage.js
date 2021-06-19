@@ -22,7 +22,7 @@ function ControlsToAddHTMLPage(props) {
            <Label for="Standard">Standard</Label>            
            <ol>
                 {controls.map(ctrl => (
-                        <li key={ctrl.label}><Button value={ctrl.value} position={ctrl.position} left={ctrl.left}  onClick={() => dispatch(INCREMENT(ctrl.label))}>{ctrl.label}</Button></li>
+                        <li key={ctrl.label}><Button  position={ctrl.position} left={ctrl.left}  onClick={() => dispatch(INCREMENT(ctrl.label))}>{ctrl.label}</Button></li>
                 ))}
            </ol>
        </Auxs>

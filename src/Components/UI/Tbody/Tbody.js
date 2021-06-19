@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Main(props) {
+function Tbody(props) {
 
     const backgroundColor = props.backgroundColor?props.backgroundColor:"none"
     const position = props.position?props.position:"none"
@@ -16,7 +16,7 @@ function Main(props) {
     const alignItems = props.alignItems?props.alignItems:"false";
     const flex= props.flex?props.flex:"false";
     const flexGrow= props.flexGrow?props.flexGrow:"false";
-
+    const flexDirection = props.flexDirection?props.flexDirection:"false";
 
     const myStyle = {
         position:position,
@@ -32,14 +32,13 @@ function Main(props) {
         justifyContent:justifyContent,
         alignItems:alignItems,
         flex:flex,
-        flexGrow:flexGrow
+        flexGrow:flexGrow,
+        flexDirection:flexDirection
   }
 
     return (
-        <main style={myStyle}>
-            {props.children}
-        </main>
+        <tbody style={myStyle}>{props.children}</tbody>
     )
 }
 
-export default Main
+export default Tbody
