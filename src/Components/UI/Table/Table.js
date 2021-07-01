@@ -18,6 +18,9 @@ function Table(props) {
     const flexGrow= props.flexGrow?props.flexGrow:"false";
     const cellSpacing = props.cellSpacing?props.cellSpacing:"0";
     const cellPadding = props.cellPadding?props.cellPadding:"0";
+    const border = props.border?props.border:0;
+    const margin = props.margin?props.margin:"false";
+
     const myStyle = {
         position:position,
         backgroundColor:backgroundColor,
@@ -32,7 +35,9 @@ function Table(props) {
         justifyContent:justifyContent,
         alignItems:alignItems,
         flex:flex,
-        flexGrow:flexGrow
+        flexGrow:flexGrow,
+        border:border,
+        margin:margin
   }
 
     return (

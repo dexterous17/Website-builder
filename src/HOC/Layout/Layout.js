@@ -15,31 +15,46 @@ function Layout(props) {
     
     const HTMLTags= data.map((tags)=>
     
-        <Tags key={tags.key} Type={tags.actionpayload}/>
+        <Tags key={tags.key} Type={tags.actionpayload} td={tags.td}/>
     );   
 
     const body =  (
-    <Tags Type="Table" position="absolute" width="100%" height="auto">  
-        <Tags Type="Tbody" position="relative" width="100%" height="auto" display="flex" flexDirection="column" >  
+    <Tags Type="Table" position="relative"  width="100%" height="90vh" border="0" margin="10px">  
+        <Tags Type="Tbody" position="relative" width="100%" height="max-content" display="flex" flexDirection="column" alignItems="center">  
             {HTMLTags} 
         </Tags> 
     </Tags>) ;
     
+
     
+    function dragStart(event) {
+        dispatch(INCREMENT('Tr-td'))
+      }
+      
+      
+      
+      function drop(event) {
+        event.preventDefault();
+        var data = event.dataTransfer.getData("Text");
+        console.log(data)
+        dispatch(INCREMENT(data))
+        
+      }
+
 
     return (
-        <Auxs className="Layout" display="flex" position="relative" flexDirection="row" height="100vh">
+        <Auxs className="Layout" display="flex" position="relative" flexDirection="row" height="auto">
                        
-            <Content display="flex" flex="2" backgroundColor="lightgrey" flexGrow="4" height="100vh" justifyContent="center" alignItems="center">
-                <Main position="relative" backgroundColor="white" width="50%" height="70vh" width="50vw">
+            <Content position="relative" display="flex" flex="2" backgroundColor="lightgrey" flexGrow="4" width="100%" height="92.5vh" justifyContent="center" overflow="scroll" >
+                <Main id="wrapper" position="relative"  backgroundColor="white" width="inherit" height="max-content" margin="10px">
                     {
                         body
                     }
                 </Main>
             </Content>
             
-            <SideSliders flex="3" backgroundColor="whitesmoke" flexGrow="1" height="100vh" display="flex" flexDirection="column">
-                <Tags Type="Button" Label="Add Content" onClick={() => dispatch(INCREMENT('Tr-td'))} />
+            <SideSliders flex="3" backgroundColor="whitesmoke" height="100%" flexGrow="1" display="flex" flexDirection="column" height="100vh" overflow="scroll">
+                <Tags Type="Button" Label="Tr-td" draggable={true} onClick={() => dispatch(INCREMENT('Tr-td'))} onDragStart={()=>dragStart('Td-tr')} ondrop={(event)=>drop(event)} />
                 <Tags Type="Button" Label="Add Button" onClick={() => dispatch(INCREMENT('Button'))}/>
             </SideSliders>
             

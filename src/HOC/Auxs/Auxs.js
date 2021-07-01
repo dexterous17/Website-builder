@@ -13,7 +13,7 @@ function Auxs(props){
     const display = props.display?props.display:"block";
     const flexDirection = props.flexDirection?props.flexDirection:"false";
     const flex= props.flex?props.flex:"false";
-    const height= props.height?props.height:"auto";
+    const height= props.height?props.height:"false";
 
     const myStyle = {
         position:position,

@@ -16,6 +16,7 @@ function SideSliders(props) {
   const flexGrow= props.flexGrow?props.flexGrow:"false";
   const flexDirection = props.flexDirection?props.flexDirection:"false";
   const display = props.display?props.display:"block";
+  const overflow= props.overflow?props.overflow:"false";
 
   const myStyle = {
       position:position,
@@ -29,7 +30,8 @@ function SideSliders(props) {
       flex:flex,
       flexGrow:flexGrow,
       flexDirection:flexDirection,
-      display:display
+      display:display,
+      overflow:overflow
     }
 
     return (

@@ -13,13 +13,13 @@ function Tags(props) {
     switch (props.Type) {
         
         case('Button'):
-            return (<Button onClick={props.onClick} >{Label}</Button>);  
+            return (<Button onClick={props.onClick} onDragStart={props.onDragStart} draggable={props.draggable}>{Label}</Button>);  
         
         case('Tr'):
             return(<Tr position="absolute" height="auto" width="auto"/>)   
         
         case('Tr-td'):
-            return(<Trtdwithfunction position="absolute" minHeight="100px" width="100%" border="1px solid blue"></Trtdwithfunction>)
+            return(<Trtdwithfunction minHeight="100px" width="80%" border="1px solid blue" td={props.td}></Trtdwithfunction>)
             
         case('Image'):
             return (<Image/>);

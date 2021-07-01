@@ -39,8 +39,25 @@ function Trtdwithfunction(props) {
         flexDirection:flexDirection
   }
 
+  
+
+  const myStyleTd= {
+      width:'100px',
+      height:'100px',
+      border:'1px solid black'
+  }
+ 
+  
+    
+  const HTMLTags= props.td.map((tags)=>
+  <td key={tags} style={myStyleTd}></td>
+  );  
+
     return (
-        <tr style={myStyle}>{props.children}</tr>
+        <tr style={myStyle}>
+            {HTMLTags}
+            {props.children}
+        </tr>
     )
 }
 

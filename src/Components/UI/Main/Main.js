@@ -11,11 +11,15 @@ function Main(props) {
     const bottom = props.bottom?props.bottom:"none";
     const width = props.width?props.width:"none";
     const height = props.height?props.height:"none";
+    const minHeight = props.minHeight?props.minHeight:"none";
     const display = props.display?props.display:"false";
     const justifyContent = props.justifyContent?props.justifyContent:"false";
     const alignItems = props.alignItems?props.alignItems:"false";
     const flex= props.flex?props.flex:"false";
     const flexGrow= props.flexGrow?props.flexGrow:"false";
+    const overflow= props.overflow?props.overflow:"false";
+    const margin = props.margin?props.margin:"false";
+    const id = props.id?props.id:"";
 
 
     const myStyle = {
@@ -32,11 +36,14 @@ function Main(props) {
         justifyContent:justifyContent,
         alignItems:alignItems,
         flex:flex,
-        flexGrow:flexGrow
+        flexGrow:flexGrow,
+        minHeight:minHeight,
+        overflow:overflow,
+        margin:margin
   }
 
     return (
-        <main style={myStyle}>
+        <main id={id} style={myStyle}>
             {props.children}
         </main>
     )
