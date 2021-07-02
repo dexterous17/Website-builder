@@ -5,6 +5,49 @@ let NewTag = [];
 
 const initialState = {
     Trkey:1,
+    TagForButton:[
+        {
+            id:1,
+            Type:"Button",
+            Label:"Add Content"
+        },
+        {
+            id:2,
+            Type:"Button"
+        },
+        {
+            id:3,
+            Type:"Button"
+        },
+        {
+            id:4,
+            Type:"Button"
+        },
+        {
+            id:5,
+            Type:"Button"
+        },
+        {
+            id:6,
+            Type:"Button"
+        },
+        {
+            id:7,
+            Type:"Button"
+        },
+        {
+            id:8,
+            Type:"Button"
+        },
+        {
+            id:9,
+            Type:"Button"
+        },
+        {
+            id:10,
+            Type:"Button"
+        }
+    ],
     Tag:[
         {
             key:0,

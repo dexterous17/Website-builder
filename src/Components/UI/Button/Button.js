@@ -20,7 +20,7 @@ function Button(props) {
   }
     
     return (
-        <button style={myStyle} onClick={onClick} draggable={props.draggable} onDragStart={onDragStart} onDragOver={props.onDragOver} >{props.children}</button>
+        <button id={props.id} style={myStyle} onClick={onClick} draggable={props.draggable} onDragStart={onDragStart} onDragOver={props.onDragOver} >{props.children}</button>
     )
 }
 

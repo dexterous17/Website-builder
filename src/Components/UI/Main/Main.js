@@ -43,7 +43,7 @@ function Main(props) {
   }
 
     return (
-        <main id={id} style={myStyle}>
+        <main id={id} style={myStyle} onDrop={props.onDrop} onDragOver={props.onDragOver}>
             {props.children}
         </main>
     )
