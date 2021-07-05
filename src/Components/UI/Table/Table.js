@@ -41,7 +41,7 @@ function Table(props) {
   }
 
     return (
-        <table cellPadding={cellPadding} cellSpacing={cellSpacing} style={myStyle}>{props.children}</table>
+        <table cellPadding={cellPadding} cellSpacing={cellSpacing} style={myStyle} id={props.id}>{props.children}</table>
     )
 
 }

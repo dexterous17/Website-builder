@@ -19,7 +19,7 @@ function Tags(props) {
             return(<Tr position="absolute" height="auto" width="auto"/>)   
         
         case('Tr-td'):
-            return(<Trtdwithfunction minHeight="100px" width="80%" border="1px solid blue" td={props.td} onDrop={props.onDrop}></Trtdwithfunction>)
+            return(<Trtdwithfunction id={props.id} minHeight="100px" width="80%" border="1px solid blue" td={props.td} onDrop={props.onDrop}></Trtdwithfunction>)
             
         case('Image'):
             return (<Image/>);

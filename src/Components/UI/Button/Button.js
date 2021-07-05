@@ -9,7 +9,7 @@ function Button(props) {
     const onClick = props.onClick?props.onClick:() =>{};
     const padding = props.padding?props.padding:"none";
     const onDragStart = props.onDragStart?props.onDragStart:() =>{};
-
+    const id = props.id?props.id:"No id";
     const myStyle = {
         position:position,
         backgroundColor:backgroundColor,
@@ -20,7 +20,7 @@ function Button(props) {
   }
     
     return (
-        <button id={props.id} style={myStyle} onClick={onClick} draggable={props.draggable} onDragStart={onDragStart} onDragOver={props.onDragOver} >{props.children}</button>
+        <button id={id} style={myStyle} onClick={onClick} draggable={props.draggable} onDragStart={onDragStart} onDragOver={props.onDragOver}>{props.children}</button>
     )
 }
 

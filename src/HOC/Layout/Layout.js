@@ -16,11 +16,11 @@ function Layout(props) {
     
     const HTMLTags= data.map((tags)=>
     
-        <Tags key={tags.key} Type={tags.actionpayload} td={tags.td} onDragOver={() => DragOver()}/>
+        <Tags key={tags.key} id={tags.key} Type={tags.actionpayload} td={tags.td}/>
     );   
 
     const body =  (
-    <Tags Type="Table" position="relative"  width="100%" height="90vh" border="0" margin="10px">  
+    <Tags id="table" Type="Table" position="relative"  width="100%" height="84.3vh" border="0" margin="18px">  
         <Tags Type="Tbody" position="relative" width="100%" height="max-content" display="flex" flexDirection="column" alignItems="center">  
             {HTMLTags} 
         </Tags> 
@@ -29,8 +29,13 @@ function Layout(props) {
     
     function DragOver(event){
         var data = event.dataTransfer.getData("Text");
-        if(data==='Tr-td'){
+        console.log(event.target.id)
+        if( data==='Content-1'&&(event.target.id==='table'||event.target.id==='wrapper') ){
             dispatch(INCREMENT('Tr-td'))
+        }else if( data==='Button-2' ){
+            console.log('button')
+        }else if( data==='Divider-3' ){
+
         }
     }
       
@@ -55,24 +60,18 @@ function Layout(props) {
                 </Main>
             </Content>
             
-            <SideSliders flex="3" backgroundColor="whitesmoke" height="100%" flexGrow="1" display="flex" flexDirection="column" height="100vh" overflow="scroll">
+            <SideSliders flex="2" backgroundColor="whitesmoke" flexGrow="1" display="flex" flexDirection="column" height="100vh" overflow="scroll">
+               
+               <ul style={{display:"flex",flexWrap:'wrap',padding:0}}>
                 {
                     TagForButton.map((TagForButton=>
-                        <Tags key={TagForButton.id} id={TagForButton.id} Type={TagForButton.Type} />
+                        <li id={TagForButton.id} key={TagForButton.id} style={ {listStyleType: "none", marginTop:"10px",margin:"10px"}} draggable onClick={() => dispatch(INCREMENT('Tr-td'))} onDragStart={DragStart} >
+                            <Tags  id={TagForButton.id} Type={TagForButton.Type} Label={TagForButton.Label} />
+                        </li>
                         ))
                 }
-                
-                <Tags Type="Button" id="Tr-td" Label="Tr-td" draggable onClick={() => dispatch(INCREMENT('Tr-td'))} onDragStart={DragStart} />
-                <Tags Type="Button" Label="Add Button" onClick={() => dispatch(INCREMENT('Button'))}/>
-                <Tags Type="Button" Label="Add Divider" draggable />
-                <Tags Type="Button" Label="Add Heading" draggable/>
-                <Tags Type="Button" Label="Add HTML" draggable/>
-                <Tags Type="Button" Label="Add Image" draggable/>
-                <Tags Type="Button" Label="Add Menu" draggable/>
-                <Tags Type="Button" Label="Add Social" draggable/>
-                <Tags Type="Button" Label="Add Text" draggable/>
-                <Tags Type="Button" Label="Add Video" draggable/>
-                    
+                </ul>                
+
             </SideSliders>
             
             <Auxs>

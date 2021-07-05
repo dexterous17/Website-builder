@@ -50,11 +50,11 @@ function Trtdwithfunction(props) {
   
     
   const HTMLTags = props.td.map((tags)=>
-  <td key={tags} style={myStyleTd}></td>
+     <td key={tags} style={myStyleTd}></td>
   );  
 
     return (
-        <tr style={myStyle} onDragOver={props.onDrop}>
+        <tr id={props.id} style={myStyle} onDragOver={props.onDrop}>
             {HTMLTags}
             {props.children}
         </tr>
