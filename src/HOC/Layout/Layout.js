@@ -16,12 +16,12 @@ function Layout(props) {
     
     const HTMLTags= data.map((tags)=>
     
-        <Tags key={tags.key} id={tags.key} Type={tags.actionpayload} td={tags.td}/>
+        <Tags key={tags.key} id={tags.key} Type={tags.actionpayload} td={tags.td} draggable onDragStart={DragStart} width={'100%'} border={'1px solid blue'} height={'95px'}/>
     );   
 
     const body =  (
-    <Tags id="table" Type="Table" position="relative"  width="100%" height="84.3vh" border="0" margin="18px">  
-        <Tags Type="Tbody" position="relative" width="100%" height="max-content" display="flex" flexDirection="column" alignItems="center">  
+    <Tags id="table" Type="Table" position="relative"  width="100vh" height="84.3vh" border="0" margin="10px">  
+        <Tags Type="Tbody" position="relative" width="100vh" height="max-content" display="flex" flexDirection="column" alignItems="center" margin="10px">  
             {HTMLTags} 
         </Tags> 
     </Tags>) ;
@@ -36,6 +36,9 @@ function Layout(props) {
             console.log('button')
         }else if( data==='Divider-3' ){
 
+        }else if( event.target.tagName ==='TR' ){
+            console.log(data)
+            console.log(event.target.id)
         }
     }
       
@@ -66,7 +69,7 @@ function Layout(props) {
                 {
                     TagForButton.map((TagForButton=>
                         <li id={TagForButton.id} key={TagForButton.id} style={ {listStyleType: "none", marginTop:"10px",margin:"10px"}} draggable onClick={() => dispatch(INCREMENT('Tr-td'))} onDragStart={DragStart} >
-                            <Tags  id={TagForButton.id} Type={TagForButton.Type} Label={TagForButton.Label} />
+                            <Tags  id={TagForButton.id} Type={TagForButton.Type} Label={TagForButton.Label} height={'95px'} width={'95px'}/>
                         </li>
                         ))
                 }

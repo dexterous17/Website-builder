@@ -19,7 +19,7 @@ const initialState = {
             Label:"Add Button"
         },
         {
-            id:3,
+            id:"Divider-3",
             Type:"Button",
             Label:"Add Divider"
         },
